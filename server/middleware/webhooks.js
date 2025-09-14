@@ -1,10 +1,7 @@
-import jwt from 'jsonwebtoken'
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const { pathname } = getRequestURL(event);
-
-
-  return;
 
   // Nur Webhook-Routen prüfen
   const allowedRoutes = ["/webhooks"]
@@ -21,14 +18,14 @@ export default defineEventHandler(async (event) => {
     }))
   }
 
-  // --- Authorization: Bearer prüfen ---
+/*   // --- Authorization: Bearer prüfen ---
   const authHeader = getHeader(event, "authorization") || ""
   if (!authHeader.startsWith("Bearer ")) {
     return sendError(event, createError({
       statusCode: 401,
       statusMessage: "Unauthorized: Missing Bearer token",
     }))
-  }
+  } */
 
 
 });
