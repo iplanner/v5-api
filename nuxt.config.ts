@@ -28,6 +28,7 @@ export default defineNuxtConfig({
 
     EE_API_URL : process.env.EE_API_URL,
     EE_API_TOKEN : process.env.EE_API_TOKEN,
+    EE_WEBHOCK_ALLOWED_IPS: process.env.EE_WEBHOCK_ALLOWED_IPS,
 
     // Public Keys (falls nötig)
     public: {
